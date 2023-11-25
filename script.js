@@ -5,11 +5,12 @@ const convertButton = document.querySelector(".button-converter")
 
 function convertvalue() {
 
-    const selectConvert = document.querySelector(".select-currency-convert").value
+
     const currencyValueToconvert = document.querySelector(".valor-da-moeda-a-convrter")
     const currencyValueConvert = document.querySelector(".valor-da-moeda-convertida")
     const inputCurrency = document.querySelector(".input-currency").value
-
+    const selectConvert = document.querySelector(".select-currency-convert").value
+    
     const dolarToDay = 5.2
     const euroToDay = 6.2
     const peosToDay = 0.014
@@ -18,7 +19,7 @@ function convertvalue() {
 
 
 
-    if (selectConvert.value== "dolar"){
+    if (selectConvert=== "dolar") {
         currencyValueConvert.innerHTML = new Intl.NumberFormat("en-US", {
 
             style: "currency",
@@ -28,7 +29,7 @@ function convertvalue() {
 
     }
 
-    if ( selectConvert.value == "euro"){
+    if (selectConvert === "euro") {
         currencyValueConvert.innerHTML = new Intl.NumberFormat("de-DE", {
 
             style: "currency",
@@ -37,10 +38,10 @@ function convertvalue() {
         }).format(inputCurrency / euroToDay)
     }
 
-    if  ( selectConvert.value =="peso"){
+     if (selectConvert=== "peso") {
         currencyValueConvert.innerHTML = new Intl.NumberFormat("ar-AR", {
 
-            style: "currency",
+             style: "currency",
             currency: "ARS"
 
         }).format(inputCurrency / peosToDay)
